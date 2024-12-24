@@ -3,7 +3,7 @@ package org.example;
 // Linear Search in Java
 
 public class LinearSearch {
-	public static int linearSearch(int array[], int x) {
+	public static int linearSearch(int[] array, int x) {
 		int n = array.length;
 
 		// Going through array sequencially
@@ -14,7 +14,7 @@ public class LinearSearch {
 		return -1;
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		int[] arr = { 3, 4, 5, 6, 7, 8, 9 };
 
 		int key = 7;
@@ -22,8 +22,8 @@ public class LinearSearch {
 		int result = linearSearch(arr, key);
 
 		if (result == -1)
-			System.out.print("Element not found");
+			System.out.print("Not found");
 		else
-			System.out.print("Element found at index: " + result);
+			System.out.print("Element found at position: " + (result + 1));
 	}
 }

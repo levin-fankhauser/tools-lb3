@@ -1,27 +1,19 @@
 package org.example;
 
-import java.io.*;
-import java.util.Scanner;
 import java.lang.Math;
 public class JumpSearch {
-	public static void main(String args[]) {
-		int i, n, key, index;
+	public static void main(String[] args) {
+		int n, key, index;
 		int[] arr = { 3, 4, 5, 6, 7, 8, 9 };
-
-		System.out.println("Array elements are: ");
-		for(int j = 0; j<arr.length; j++){
-			System.out.print(arr[j] + " ");
-		}
 		n = 12;
 		key = 7;
-		System.out.println("\nThe element to be searched: "+ key);
 		index = jump_search(arr, n, key);
 		if(index >= 0)
-			System.out.print("The element is found at position " + (index+1));
+			System.out.print("Element found at position " + (index+1));
 		else
-			System.out.print("Unsuccessful Search");
+			System.out.print("Not found");
 	}
-	static int jump_search(int arr[], int n, int key) {
+	static int jump_search(int[] arr, int n, int key) {
 		int i, j, m, k;
 		i = 0;
 		m = (int)Math.sqrt(n);
