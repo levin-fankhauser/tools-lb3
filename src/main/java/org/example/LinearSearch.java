@@ -1,5 +1,10 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 public class LinearSearch {
 	public static int linearSearch(int[] array, int x) {
 		int n = array.length;
@@ -12,9 +17,20 @@ public class LinearSearch {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 3, 4, 5, 6, 7, 8, 9 };
+		List<Integer> numbers = new ArrayList<>();
+		for (int i = 1; i <= 1000; i++) {
+			numbers.add(i);
+		}
 
-		int key = 7;
+		// Setze einen festen Seed für den Zufallsgenerator
+		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		Random random = new Random(seed);
+
+		// Mische die Liste
+		Collections.shuffle(numbers, random);
+
+		int[] arr = numbers.stream().mapToInt(Integer::intValue).toArray();
+		int key = 20;
 
 		int result = linearSearch(arr, key);
 

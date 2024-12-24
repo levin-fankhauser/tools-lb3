@@ -1,19 +1,37 @@
 package org.example;
 
 import java.lang.Math;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 public class JumpSearch {
 	public static void main(String[] args) {
-		int n, key, index;
-		int[] arr = { 3, 4, 5, 6, 7, 8, 9 };
-		n = 12;
-		key = 7;
-		index = jump_search(arr, n, key);
+		int key, index;
+
+		List<Integer> numbers = new ArrayList<>();
+		for (int i = 1; i <= 1000; i++) {
+			numbers.add(i);
+		}
+
+		// Setze einen festen Seed für den Zufallsgenerator
+		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		Random random = new Random(seed);
+
+		// Mische die Liste
+		Collections.shuffle(numbers, random);
+
+		int[] arr = numbers.stream().mapToInt(Integer::intValue).toArray();
+		key = 20;
+		index = jump_search(arr, arr.length, key);
 		if(index >= 0)
 			System.out.print("Element found at position " + (index+1));
 		else
 			System.out.print("Not found");
 	}
-	static int jump_search(int[] arr, int n, int key) {
+	public static int jump_search(int[] arr, int n, int key) {
+
 		int i, j, m, k;
 		i = 0;
 		m = (int)Math.sqrt(n);

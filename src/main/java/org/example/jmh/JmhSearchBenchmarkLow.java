@@ -1,5 +1,8 @@
-package org.example;
+package org.example.jmh;
 
+import org.example.BinarySearch;
+import org.example.JumpSearch;
+import org.example.LinearSearch;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
@@ -7,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @State(Scope.Thread)
-public class JmhSearchBenchmark {
+public class JmhSearchBenchmarkLow {
 	int[] arr = {3, 4, 5, 6, 7, 8, 9};
 	int key = 7;
 
@@ -18,7 +21,7 @@ public class JmhSearchBenchmark {
 
 	@Benchmark
 	public int testBinarySearch() {
-		return new BinarySearch().binarySearch(arr, key, arr.length - 1);
+		return BinarySearch.binarySearch(arr, key, arr.length - 1);
 	}
 
 	@Benchmark
