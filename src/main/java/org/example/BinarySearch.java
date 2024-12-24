@@ -1,11 +1,8 @@
 package org.example;
 
-// Binary Search in Java
-
 public class BinarySearch {
 	int binarySearch(int[] array, int x, int high) {
 		int low = 0;
-		// Repeat until the pointers low and high meet each other
 		while (low <= high) {
 			int mid = low + (high - low) / 2;
 

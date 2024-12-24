@@ -25,7 +25,6 @@ public class JumpSearch {
 				return -1;
 		}
 
-		// linear search on the block
 		for(j = i; j<m; j++) {
 			if(arr[j] == key)
 				return j;
