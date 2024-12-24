@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+@Warmup(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
+@Fork(2)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @State(Scope.Thread)
