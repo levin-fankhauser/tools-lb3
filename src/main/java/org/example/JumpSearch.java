@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class JumpSearch {
+
 	public static void main(String[] args) {
 		int key, index;
 
@@ -25,27 +26,30 @@ public class JumpSearch {
 		// int[] arr = {3, 4, 5, 6, 7, 8, 9};
 
 		key = 20;
-		index = jump_search(arr, arr.length, key);
-		if(index >= 0)
-			System.out.print("Element found at position " + (index+1));
-		else
-			System.out.print("Not found");
+		for (int i = 0; i < 1000; i++) {
+			index = jump_search(arr, arr.length, key);
+			if (index >= 0)
+				System.out.print("Element found at position " + (index + 1));
+			else
+				System.out.print("Not found");
+		}
 	}
+
 	public static int jump_search(int[] arr, int n, int key) {
 
 		int i, j, m, k;
 		i = 0;
-		m = (int)Math.sqrt(n);
+		m = (int) Math.sqrt(n);
 		k = m;
-		while(arr[m] <= key && m < n) {
+		while (arr[m] <= key && m < n) {
 			i = m;
 			m += k;
-			if(m > n - 1)
+			if (m > n - 1)
 				return -1;
 		}
 
-		for(j = i; j<m; j++) {
-			if(arr[j] == key)
+		for (j = i; j < m; j++) {
+			if (arr[j] == key)
 				return j;
 		}
 		return -1;

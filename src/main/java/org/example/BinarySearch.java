@@ -43,10 +43,12 @@ public class BinarySearch {
 		// int[] arr = {3, 4, 5, 6, 7, 8, 9};
 		int n = arr.length;
 		int key = 20;
-		int result = binarySearch(arr, key, n - 1);
-		if (result == -1)
-			System.out.println("Not found");
-		else
-			System.out.println("Element found at position " + (result + 1));
+		for (int i = 0; i < 1000; i++) {
+			int result = binarySearch(arr, key, n - 1);
+			if (result == -1)
+				System.out.println("Not found");
+			else
+				System.out.println("Element found at position " + (result + 1));
+		}
 	}
 }
