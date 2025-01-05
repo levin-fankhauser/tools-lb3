@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 public class LinearSearch {
+
 	public static int linearSearch(int[] array, int x) {
 		int n = array.length;
 
@@ -22,21 +23,25 @@ public class LinearSearch {
 			numbers.add(i);
 		}
 
-		// Setze einen festen Seed für den Zufallsgenerator
-		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		long seed = 12345L;
 		Random random = new Random(seed);
 
-		// Mische die Liste
 		Collections.shuffle(numbers, random);
 
+		// Uncomment the prefered line to run with a big or small array
 		int[] arr = numbers.stream().mapToInt(Integer::intValue).toArray();
+		// int[] arr = {3, 4, 5, 6, 7, 8, 9};
+
 		int key = 20;
 
-		int result = linearSearch(arr, key);
+		for (int i = 0; i < 1000; i++) {
+			int result = linearSearch(arr, key);
 
-		if (result == -1)
-			System.out.print("Not found");
-		else
-			System.out.print("Element found at position: " + (result + 1));
+			if (result == -1)
+				System.out.print("Not found");
+			else
+				System.out.print("Element found at position: " + (result + 1));
+		}
+
 	}
 }

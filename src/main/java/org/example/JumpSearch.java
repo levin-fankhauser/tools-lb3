@@ -15,14 +15,15 @@ public class JumpSearch {
 			numbers.add(i);
 		}
 
-		// Setze einen festen Seed für den Zufallsgenerator
-		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		long seed = 12345L;
 		Random random = new Random(seed);
 
-		// Mische die Liste
 		Collections.shuffle(numbers, random);
 
+		// Uncomment the prefered line to run with a big or small array
 		int[] arr = numbers.stream().mapToInt(Integer::intValue).toArray();
+		// int[] arr = {3, 4, 5, 6, 7, 8, 9};
+
 		key = 20;
 		index = jump_search(arr, arr.length, key);
 		if(index >= 0)

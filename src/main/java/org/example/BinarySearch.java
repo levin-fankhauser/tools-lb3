@@ -33,15 +33,14 @@ public class BinarySearch {
 			numbers.add(i);
 		}
 
-		// Setze einen festen Seed für den Zufallsgenerator
-		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		long seed = 12345L;
 		Random random = new Random(seed);
 
-		// Mische die Liste
 		Collections.shuffle(numbers, random);
 
+		// Uncomment the prefered line to run with a big or small array
 		int[] arr = numbers.stream().mapToInt(Integer::intValue).toArray();
-
+		// int[] arr = {3, 4, 5, 6, 7, 8, 9};
 		int n = arr.length;
 		int key = 20;
 		int result = binarySearch(arr, key, n - 1);
