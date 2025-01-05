@@ -1,0 +1,134 @@
+JMH Test Run with 7 entries:
+
+C:\Users\levin\.jdks\openjdk-23\bin\java.exe "-javaagent:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\idea_rt.jar=50911:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Coding\Modul-450\tools-lb3\target\classes;C:\Users\levin\.m2\repository\org\openjdk\jmh\jmh-core\1.37\jmh-core-1.37.jar;C:\Users\levin\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\levin\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar org.openjdk.jmh.Main "org.example.jmh.JmhSearchBenchmarkLow.*"
+# JMH version: 1.37
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\levin\.jdks\openjdk-23\bin\java.exe
+# VM options: -javaagent:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\idea_rt.jar=50911:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 5 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.example.jmh.JmhSearchBenchmarkLow.testBinarySearch
+
+# Run progress: 0.00% complete, ETA 00:03:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 13.803 ns/op
+# Warmup Iteration   2: 9.839 ns/op
+# Warmup Iteration   3: 9.942 ns/op
+Iteration   1: 10.477 ns/op
+Iteration   2: 10.282 ns/op
+Iteration   3: 10.383 ns/op
+
+# Run progress: 16.67% complete, ETA 00:02:35
+# Fork: 2 of 2
+# Warmup Iteration   1: 14.602 ns/op
+# Warmup Iteration   2: 10.204 ns/op
+# Warmup Iteration   3: 10.344 ns/op
+Iteration   1: 10.272 ns/op
+Iteration   2: 10.423 ns/op
+Iteration   3: 10.153 ns/op
+
+
+Result "org.example.jmh.JmhSearchBenchmarkLow.testBinarySearch":
+  10.331 �(99.9%) 0.332 ns/op [Average]
+  (min, avg, max) = (10.153, 10.331, 10.477), stdev = 0.119
+  CI (99.9%): [9.999, 10.664] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\levin\.jdks\openjdk-23\bin\java.exe
+# VM options: -javaagent:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\idea_rt.jar=50911:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 5 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.example.jmh.JmhSearchBenchmarkLow.testJumpSearch
+
+# Run progress: 33.33% complete, ETA 00:02:04
+# Fork: 1 of 2
+# Warmup Iteration   1: 7.493 ns/op
+# Warmup Iteration   2: 5.033 ns/op
+# Warmup Iteration   3: 5.340 ns/op
+Iteration   1: 5.070 ns/op
+Iteration   2: 5.086 ns/op
+Iteration   3: 5.242 ns/op
+
+# Run progress: 50.00% complete, ETA 00:01:33
+# Fork: 2 of 2
+# Warmup Iteration   1: 7.533 ns/op
+# Warmup Iteration   2: 5.068 ns/op
+# Warmup Iteration   3: 5.193 ns/op
+Iteration   1: 5.264 ns/op
+Iteration   2: 5.289 ns/op
+Iteration   3: 5.261 ns/op
+
+
+Result "org.example.jmh.JmhSearchBenchmarkLow.testJumpSearch":
+  5.202 �(99.9%) 0.273 ns/op [Average]
+  (min, avg, max) = (5.070, 5.202, 5.289), stdev = 0.097
+  CI (99.9%): [4.929, 5.475] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\levin\.jdks\openjdk-23\bin\java.exe
+# VM options: -javaagent:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\idea_rt.jar=50911:C:\Users\levin\AppData\Local\Programs\IntelliJ IDEA Ultimate\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 5 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.example.jmh.JmhSearchBenchmarkLow.testLinearSearch
+
+# Run progress: 66.67% complete, ETA 00:01:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 3.139 ns/op
+# Warmup Iteration   2: 2.067 ns/op
+# Warmup Iteration   3: 2.453 ns/op
+Iteration   1: 2.489 ns/op
+Iteration   2: 2.474 ns/op
+Iteration   3: 2.501 ns/op
+
+# Run progress: 83.33% complete, ETA 00:00:31
+# Fork: 2 of 2
+# Warmup Iteration   1: 3.032 ns/op
+# Warmup Iteration   2: 2.071 ns/op
+# Warmup Iteration   3: 2.502 ns/op
+Iteration   1: 2.447 ns/op
+Iteration   2: 2.400 ns/op
+Iteration   3: 2.431 ns/op
+
+
+Result "org.example.jmh.JmhSearchBenchmarkLow.testLinearSearch":
+  2.457 �(99.9%) 0.108 ns/op [Average]
+  (min, avg, max) = (2.400, 2.457, 2.501), stdev = 0.038
+  CI (99.9%): [2.350, 2.565] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:07
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                               Mode  Cnt   Score   Error  Units
+JmhSearchBenchmarkLow.testBinarySearch  avgt    6  10.331 � 0.332  ns/op
+JmhSearchBenchmarkLow.testJumpSearch    avgt    6   5.202 � 0.273  ns/op
+JmhSearchBenchmarkLow.testLinearSearch  avgt    6   2.457 � 0.108  ns/op
+
+Process finished with exit code 0
