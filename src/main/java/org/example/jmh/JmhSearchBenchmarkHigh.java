@@ -42,11 +42,9 @@ public class JmhSearchBenchmarkHigh {
 			numbers.add(i);
 		}
 
-		// Setze einen festen Seed für den Zufallsgenerator
-		long seed = 12345L; // Der Seed bestimmt die Reihenfolge
+		long seed = 12345L;
 		Random random = new Random(seed);
 
-		// Mische die Liste
 		Collections.shuffle(numbers, random);
 
 		return numbers.stream().mapToInt(Integer::intValue).toArray();
